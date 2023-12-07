@@ -74,3 +74,4 @@ crashlytics-build.properties
 .vscode
 *.vsconfig
 .build
+/Packages/com.ptc.vuforia.engine-10.19.3.tgz
