@@ -547,7 +547,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633300538}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b5df716a666b16469f37832684c706c, type: 3}
   m_Name: 
@@ -1334,8 +1334,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 633300539}
-        m_TargetAssemblyTypeName: CubeController, Assembly-CSharp
+      - m_Target: {fileID: 1621608862}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Rotation
         m_Mode: 1
         m_Arguments:
@@ -3176,6 +3176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1621608861}
+  - component: {fileID: 1621608862}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3192,12 +3193,34 @@ Transform:
   m_GameObject: {fileID: 1621608860}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 410.25006, y: 37.75, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1621608862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621608860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447248974364ef141a7facaa4445e3cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedObject: {fileID: 633300538}
+  sliderX: {fileID: 1144133413}
+  sliderY: {fileID: 1924919809}
+  sliderZ: {fileID: 1559188600}
+  initialPos: {x: 0, y: 0, z: 0}
+  initialRot: {x: 0, y: 0, z: 0}
+  minPos: -1
+  maxPos: 1
+  minRotate: 0
+  maxRotate: 360
 --- !u!1 &1625000743
 GameObject:
   m_ObjectHideFlags: 0

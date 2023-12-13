@@ -28,8 +28,6 @@ public class CubeController : MonoBehaviour
     void Update()
     {
         if(rotate){
-            //transform.Rotate (new Vector3 (15, 30, 45) * Time.deltaTime);
-            
             var rot = transform.localRotation.eulerAngles;
             rot.Set(sliderX.value,
             sliderY.value, 
