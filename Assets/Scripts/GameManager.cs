@@ -6,9 +6,15 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject parcours;
+
+    public GameObject menuUIEditObjectPos;
+
     public static GameManager Manager;
 
     public GameObject selectedObject;
+
+    public TMP_Text buttonRotPosText;
 
     public TMP_Text posOrRot;
 
@@ -106,6 +112,7 @@ public class GameManager : MonoBehaviour
         sliderY.value = initialPos.y; 
         sliderZ.value = initialPos.z;
 
+        buttonRotPosText.text = "Rotate";
         posOrRot.text = "Position";
     }
 
@@ -118,6 +125,7 @@ public class GameManager : MonoBehaviour
         sliderY.value = initialRot.y;
         sliderZ.value = initialRot.z;
 
+        buttonRotPosText.text = "Move";
         posOrRot.text = "Rotation";
     }
 
@@ -129,6 +137,22 @@ public class GameManager : MonoBehaviour
         rotate = false;
         objectIsSelect = true;
 
+        menuUIEditObjectPos.SetActive(true);
+
         initForChangePos();
+    }
+
+    public void unselectAndHide(){
+        objectIsSelect = false;
+        selectedObject = null;
+
+        //hide UI
+        menuUIEditObjectPos.SetActive(false);
+    }
+
+    public void fixToParcours() {
+        selectedObject.transform.SetParent(parcours.transform);
+
+        unselectAndHide();
     }
 }
