@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public bool isStart = false;
+
+    public GameObject parentGameObjectWithPhysic;
     public GameObject parcours;
 
     public GameObject menuUIEditObjectPos;
@@ -154,5 +158,29 @@ public class GameManager : MonoBehaviour
         selectedObject.transform.SetParent(parcours.transform);
 
         unselectAndHide();
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("Game reset");
+    }
+
+    public void StartGame()
+    {
+        isStart = true;
+        Transform[] children = parentGameObjectWithPhysic.GetComponentsInChildren<Transform>();
+
+        if(children != null)
+        {
+            foreach(Transform child in children)
+            {
+                Rigidbody rb = child.GetComponent<Rigidbody>();
+                if(rb != null){
+                    rb.isKinematic = false;
+                    rb.useGravity = true;
+                }
+            }
+        }
     }
 }
