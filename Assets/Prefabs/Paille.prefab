@@ -88,7 +88,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9a2df84acc33f1b4d99ce102733d787b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 886b46aaacb210b4f8c6ecac17854a14, type: 2}
+      objectReference: {fileID: 2100000, guid: 333039ad6c235364ab1c84b7135a744f, type: 2}
     - target: {fileID: 919132149155446097, guid: 9a2df84acc33f1b4d99ce102733d787b, type: 3}
       propertyPath: m_Name
       value: Tuyau
@@ -226,7 +226,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 81efed5e719baa343920d35cb75b9750, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 886b46aaacb210b4f8c6ecac17854a14, type: 2}
+      objectReference: {fileID: 2100000, guid: 333039ad6c235364ab1c84b7135a744f, type: 2}
     - target: {fileID: 919132149155446097, guid: 81efed5e719baa343920d35cb75b9750, type: 3}
       propertyPath: m_Name
       value: Coude
