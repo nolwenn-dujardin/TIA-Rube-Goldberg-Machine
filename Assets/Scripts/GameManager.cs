@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject menuUIEditObjectPos;
 
+    public GameObject menuUIEnding;
+
+    public GameObject menuUIStartReset;
+
     public static GameManager Manager;
 
     public GameObject selectedObject;
@@ -21,6 +25,10 @@ public class GameManager : MonoBehaviour
     public TMP_Text buttonRotPosText;
 
     public TMP_Text posOrRot;
+
+    public TMP_Text timerText;
+
+    public TMP_Text objectNbText;
 
     public bool objectIsSelect = false;
 
@@ -37,6 +45,10 @@ public class GameManager : MonoBehaviour
 
     public int minRotate = 0;
     public int maxRotate = 360;
+
+    public float Timer = 0f;
+
+    public int nbObjectFixed = 0;
 
     public void Awake()
     {
@@ -77,6 +89,9 @@ public class GameManager : MonoBehaviour
             }
         }
         
+        if(isStart){
+            Timer += Time.deltaTime;
+        }
     }
 
     public void Rotation(){
@@ -158,6 +173,7 @@ public class GameManager : MonoBehaviour
         selectedObject.transform.SetParent(parcours.transform);
 
         unselectAndHide();
+        nbObjectFixed++;
     }
 
     public void ResetGame()
@@ -182,5 +198,16 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void EndGame(){
+        //TODO end timer display ending screen
+        isStart = false;
+
+        timerText.text = Timer.ToString();
+        objectNbText.text = nbObjectFixed.ToString();
+
+        menuUIStartReset.SetActive(false);
+        menuUIEnding.SetActive(true);
     }
 }
