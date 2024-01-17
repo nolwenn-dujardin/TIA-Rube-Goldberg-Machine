@@ -168,6 +168,7 @@ Transform:
   - {fileID: 412585438}
   - {fileID: 1715389718}
   - {fileID: 816479710}
+  - {fileID: 782628376}
   m_Father: {fileID: 1489274414}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7483476
@@ -686,7 +687,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 327191}
     m_Modifications:
     - target: {fileID: 1366342018751096474, guid: 3c95c2f59521ff640866acfcd4d93aaa, type: 3}
       propertyPath: jumpForce
@@ -4174,6 +4175,11 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 765565295}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!4 &782628376 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8303843299506245167, guid: 3c95c2f59521ff640866acfcd4d93aaa, type: 3}
+  m_PrefabInstance: {fileID: 166802988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &786357606
 GameObject:
   m_ObjectHideFlags: 0
@@ -10840,4 +10846,3 @@ SceneRoots:
   - {fileID: 749524236}
   - {fileID: 2026733490}
   - {fileID: 1621608861}
-  - {fileID: 166802988}
