@@ -704,7 +704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8303843299506245167, guid: 3c95c2f59521ff640866acfcd4d93aaa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0454
+      value: 0.045400023
       objectReference: {fileID: 0}
     - target: {fileID: 8303843299506245167, guid: 3c95c2f59521ff640866acfcd4d93aaa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -737,6 +737,10 @@ PrefabInstance:
     - target: {fileID: 8303843299506245167, guid: 3c95c2f59521ff640866acfcd4d93aaa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303843299506245167, guid: 3c95c2f59521ff640866acfcd4d93aaa, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -896,7 +900,7 @@ GameObject:
   - component: {fileID: 214308371}
   - component: {fileID: 214308374}
   - component: {fileID: 214308373}
-  - component: {fileID: 214308372}
+  - component: {fileID: 214308375}
   m_Layer: 0
   m_Name: ImageTarget Ramp
   m_TagString: Untagged
@@ -920,25 +924,6 @@ Transform:
   - {fileID: 1580466661}
   m_Father: {fileID: 1331732807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &214308372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214308370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 214308374}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Fissure
-  mDatasetName: Vuforia/VuforiaMars_Images.xml
-  mCastedBehaviour: {fileID: 214308374}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &214308373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1009,7 +994,26 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 214308372}
+  mPreview: {fileID: 214308375}
+--- !u!114 &214308375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214308370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 214308374}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: Fissure
+  mDatasetName: Vuforia/VuforiaMars_Images.xml
+  mCastedBehaviour: {fileID: 214308374}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &230584531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1025,7 @@ GameObject:
   - component: {fileID: 230584532}
   - component: {fileID: 230584535}
   - component: {fileID: 230584534}
-  - component: {fileID: 230584533}
+  - component: {fileID: 230584536}
   m_Layer: 0
   m_Name: ImageTarget BouncingPlatform
   m_TagString: Untagged
@@ -1045,25 +1049,6 @@ Transform:
   - {fileID: 782628376}
   m_Father: {fileID: 1331732807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &230584533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 230584531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 230584535}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: MarsBox.Top
-  mDatasetName: Vuforia/VuforiaMars_Images.xml
-  mCastedBehaviour: {fileID: 230584535}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &230584534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,18 +1108,37 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: MarsBox.Top
+  mTrackableName: MarsBox.Front_scaled
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/VuforiaMars_Images.xml
-  mAspectRatio: 0.5
-  mImageTargetType: 0
+  mAspectRatio: 1.3333334
+  mImageTargetType: 3
   mWidth: 0.5
-  mHeight: 0.25
-  mRuntimeTexture: {fileID: 0}
+  mHeight: 0.6666667
+  mRuntimeTexture: {fileID: 2800000, guid: d66032d25cff61c4585c2f395d4f6a3c, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 230584533}
+  mPreview: {fileID: 230584536}
+--- !u!114 &230584536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230584531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 230584535}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: MarsBox.Front_scaled
+  mDatasetName: Vuforia/VuforiaMars_Images.xml
+  mCastedBehaviour: {fileID: 230584535}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &231662542
 GameObject:
   m_ObjectHideFlags: 0
@@ -11642,6 +11646,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1878123281}
     m_Modifications:
+    - target: {fileID: 454832834545967894, guid: a2d011b35503196499b01754ea3ad46d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1613989505}
     - target: {fileID: 2988810209764596884, guid: a2d011b35503196499b01754ea3ad46d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.22
@@ -11686,18 +11694,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1613989505}
-    - target: {fileID: 454832834545967894, guid: a2d011b35503196499b01754ea3ad46d, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1613989505}
-    - target: {fileID: 7009750812317728818, guid: a2d011b35503196499b01754ea3ad46d, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1613989505}
     - target: {fileID: 5604096161063095000, guid: a2d011b35503196499b01754ea3ad46d, type: 3}
       propertyPath: m_Name
       value: Corner
       objectReference: {fileID: 0}
+    - target: {fileID: 7009750812317728818, guid: a2d011b35503196499b01754ea3ad46d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1613989505}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
