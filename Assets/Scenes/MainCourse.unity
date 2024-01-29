@@ -440,6 +440,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7537307}
   m_CullTransparentMesh: 1
+--- !u!1 &40919614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2973755514196483280, guid: fc651363c3b6d6b46afe81177e156d1f, type: 3}
+  m_PrefabInstance: {fileID: 365832697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &65284393 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5604096161063095000, guid: a2d011b35503196499b01754ea3ad46d, type: 3}
@@ -1710,6 +1715,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1331732807}
     m_Modifications:
+    - target: {fileID: 2684250155905907695, guid: fc651363c3b6d6b46afe81177e156d1f, type: 3}
+      propertyPath: mPreview
+      value: 
+      objectReference: {fileID: 365832702}
     - target: {fileID: 2973755514196483280, guid: fc651363c3b6d6b46afe81177e156d1f, type: 3}
       propertyPath: m_Name
       value: ImageTarget BouncingPlatform
@@ -1766,16 +1775,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4707894903742699326, guid: fc651363c3b6d6b46afe81177e156d1f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2973755514196483280, guid: fc651363c3b6d6b46afe81177e156d1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 365832702}
   m_SourcePrefab: {fileID: 100100000, guid: fc651363c3b6d6b46afe81177e156d1f, type: 3}
 --- !u!4 &365832698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8951760805460565800, guid: fc651363c3b6d6b46afe81177e156d1f, type: 3}
   m_PrefabInstance: {fileID: 365832697}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &365832701 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2684250155905907695, guid: fc651363c3b6d6b46afe81177e156d1f, type: 3}
+  m_PrefabInstance: {fileID: 365832697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40919614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &365832702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40919614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 365832701}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: MarsBox.Front_scaled
+  mDatasetName: Vuforia/VuforiaMars_Images.xml
+  mCastedBehaviour: {fileID: 365832701}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &367287879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,6 +2557,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 987694316}
+    - target: {fileID: 3797869912083933390, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797869912083933390, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5029960580544106603, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2582,19 +2633,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9191248216010528155, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 477697634}
+      addedObject: {fileID: 477697647}
     - targetCorrespondingSourceObject: {fileID: 9191248216010528155, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 477697635}
-    - targetCorrespondingSourceObject: {fileID: 9191248216010528155, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 477697638}
-    - targetCorrespondingSourceObject: {fileID: 9191248216010528155, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 477697641}
-    - targetCorrespondingSourceObject: {fileID: 9191248216010528155, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 477697644}
+      addedObject: {fileID: 477697648}
   m_SourcePrefab: {fileID: 100100000, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
 --- !u!1 &477697632 stripped
 GameObject:
@@ -2612,7 +2654,27 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &477697634
+--- !u!1 &477697634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2097539165008372262, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
+  m_PrefabInstance: {fileID: 477697631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &477697635 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6565627800874623663, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
+  m_PrefabInstance: {fileID: 477697631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &477697636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2566894142717313822, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
+  m_PrefabInstance: {fileID: 477697631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &477697637 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6833988566717655358, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
+  m_PrefabInstance: {fileID: 477697631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &477697647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2631,64 +2693,7 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 477697633}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
---- !u!114 &477697635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477697632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 477697633}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Astronaut
-  mDatasetName: Vuforia/VuforiaMars_Images.xml
-  mCastedBehaviour: {fileID: 477697633}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &477697638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477697632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 477697633}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Astronaut
-  mDatasetName: Vuforia/VuforiaMars_Images.xml
-  mCastedBehaviour: {fileID: 477697633}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &477697641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477697632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 477697633}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Astronaut
-  mDatasetName: Vuforia/VuforiaMars_Images.xml
-  mCastedBehaviour: {fileID: 477697633}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &477697644
+--- !u!114 &477697648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9866,6 +9871,11 @@ MonoBehaviour:
   maxRotate: 360
   Timer: 0
   nbObjectFixed: 0
+  helpers:
+  - {fileID: 477697637}
+  - {fileID: 477697636}
+  - {fileID: 477697635}
+  - {fileID: 477697634}
 --- !u!1 &1625000743
 GameObject:
   m_ObjectHideFlags: 0

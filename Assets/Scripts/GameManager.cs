@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System;
+using UnityEditor;
 
 public class GameManager : MonoBehaviour
 {
@@ -50,6 +52,8 @@ public class GameManager : MonoBehaviour
 
     public int nbObjectFixed = 0;
 
+    public GameObject[] helpers;
+
     public void Awake()
     {
         if(GameManager.Manager != null) { Destroy(this); }
@@ -59,6 +63,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        foreach(GameObject help in helpers){
+            help.SetActive(StaticClass.IsEasyMode);
+        }
+
         sliderX.minValue = sliderY.minValue = sliderZ.minValue = minPos;
         sliderX.maxValue = sliderY.maxValue = sliderZ.maxValue = maxPos;
         //initialPos = selectedObject.transform.localPosition;
@@ -66,6 +74,7 @@ public class GameManager : MonoBehaviour
 
         posOrRot.text = "Position";
     }
+
 
     // Update is called once per frame
     void Update()
