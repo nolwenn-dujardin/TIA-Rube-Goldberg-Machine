@@ -8,7 +8,7 @@ public class ConveyorActivator : MonoBehaviour
     public UnityEvent activateBelt;
 
     private void OnTriggerEnter(Collider other) {
-        if(GameManager.Manager.isStart && other.CompareTag("ConveyorActivator")){
+        if(GameManager.Manager.isStart && other.CompareTag("Player")){
             activateBelt.Invoke();
             GetComponent<Renderer>().material.color = Color.green;
         }

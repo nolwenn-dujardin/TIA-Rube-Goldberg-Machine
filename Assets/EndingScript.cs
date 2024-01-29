@@ -8,7 +8,7 @@ public class EndingScript : MonoBehaviour
     public UnityEvent activateEnding;
 
     private void OnTriggerEnter(Collider other) {
-        if(GameManager.Manager.isStart && other.CompareTag("ConveyorActivator")){
+        if(GameManager.Manager.isStart && other.CompareTag("Player")){
             activateEnding.Invoke();
             GetComponent<Renderer>().material.color = Color.green;
         }
