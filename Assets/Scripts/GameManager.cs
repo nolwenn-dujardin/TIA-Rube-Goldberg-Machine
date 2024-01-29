@@ -170,7 +170,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void fixToParcours() {
+        //Create duplicate and fix object to the parkour
+        GameObject duplicate = GameObject.Instantiate(selectedObject);
+        duplicate.transform.SetParent(selectedObject.transform.parent);
+        
         selectedObject.transform.SetParent(parcours.transform);
+
+        duplicate.transform.localPosition = new Vector3(0,(float)0.5,0);
 
         unselectAndHide();
         nbObjectFixed++;
