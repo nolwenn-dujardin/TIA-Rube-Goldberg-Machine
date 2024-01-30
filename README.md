@@ -30,10 +30,14 @@ Aides :
         - ``Drone`` : Coin/Angle
     ![ImagesReadMe/ImagesTarget.png](ImagesReadMe/ImagesTarget.png)
     - Sélectionner l'objet virtuel visible sur l'image target
-    - Sélectionner le mode de placement avec le bouton central en haut: ``Roration``, ``Position``. Le mode en cours est indiqué en dessous du bouton
+    - Sélectionner le mode de placement avec le bouton central en haut: ``Rotation``, ``Position``. Le mode en cours est indiqué en dessous du bouton
     ![ImagesReadMe/EditMenuRotate.png](ImagesReadMe/EditMenuRotate.png)
     ![ImagesReadMe/EditMenuMove.png](ImagesReadMe/EditMenuMove.png)
     - Modifier la position ou rotation sur les 3 axes (x, y, z) à l'aide des 3 glissières en bas à droite
     - Appuyer sur ``Ajouter``, en haut à gauche, pour fixer l'objet à son emplacement actuel
     - Appuyer sur la croix, en haut à droite, pour annuler la sélection de l'objet
-- 
+- Le résumer de la partie s'affiche lorsque le parcours est complété et comprend :
+    - Le nombre de reset
+    - Le temps total de jeu
+    - Le nombre d'objets utilisés
+    ![ImagesReadMe/EndMenu.png](ImagesReadMe/EndMenu.png)
