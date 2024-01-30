@@ -2092,6 +2092,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9191248216010528155, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
       insertIndex: -1
       addedObject: {fileID: 477697663}
+    - targetCorrespondingSourceObject: {fileID: 9191248216010528155, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 477697664}
   m_SourcePrefab: {fileID: 100100000, guid: 5c83282545d41094a9e1031a4dd80f15, type: 3}
 --- !u!1 &477697632 stripped
 GameObject:
@@ -2282,6 +2285,25 @@ MonoBehaviour:
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
 --- !u!114 &477697663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477697632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 477697633}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: Astronaut
+  mDatasetName: Vuforia/VuforiaMars_Images.xml
+  mCastedBehaviour: {fileID: 477697633}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &477697664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3075,7 +3097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5329297538374892597, guid: 2d902173ccef9eb43bd36bc0d2fe8f20, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
