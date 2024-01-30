@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     public TMP_Text timerText;
 
+    public TMP_Text timerTextFromStart;
+
     public TMP_Text objectNbText;
 
     public bool objectIsSelect = false;
@@ -48,7 +50,8 @@ public class GameManager : MonoBehaviour
     public int minRotate = 0;
     public int maxRotate = 360;
 
-    public float Timer = 0f;
+    private float startTime;
+    private float timer;
 
     public int nbObjectFixed = 0;
 
@@ -63,8 +66,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach(GameObject help in helpers){
-            help.SetActive(StaticClass.IsEasyMode);
+        if(!StaticClass.IsTestMode){
+           foreach(GameObject help in helpers){
+                help.SetActive(StaticClass.IsEasyMode);
+            } 
         }
 
         sliderX.minValue = sliderY.minValue = sliderZ.minValue = minPos;
@@ -73,6 +78,8 @@ public class GameManager : MonoBehaviour
         //initialRot = selectedObject.transform.localRotation.eulerAngles;
 
         posOrRot.text = "Position";
+
+        startTime = Time.time;
     }
 
 
@@ -97,10 +104,6 @@ public class GameManager : MonoBehaviour
                 sliderZ.value); 
             }
         }
-        
-        if(isStart){
-            Timer += Time.deltaTime;
-        }
     }
 
     public void Rotation(){
@@ -123,7 +126,6 @@ public class GameManager : MonoBehaviour
 
                 //Restore object position
                 selectedObject.transform.localPosition = initialPos;
-
                 initForChangePos();
             }
 
@@ -140,8 +142,8 @@ public class GameManager : MonoBehaviour
         sliderY.value = initialPos.y; 
         sliderZ.value = initialPos.z;
 
-        buttonRotPosText.text = "Rotate";
-        posOrRot.text = "Position";
+        buttonRotPosText.text = "Position";
+        //posOrRot.text = "Position";
     }
 
     //Init slider value for allowing to change rotation of gameObject
@@ -153,8 +155,8 @@ public class GameManager : MonoBehaviour
         sliderY.value = initialRot.y;
         sliderZ.value = initialRot.z;
 
-        buttonRotPosText.text = "Move";
-        posOrRot.text = "Rotation";
+        buttonRotPosText.text = "Rotation";
+        //posOrRot.text = "Rotation";
     }
 
     public void SelectObject(GameObject newObject){
@@ -186,6 +188,7 @@ public class GameManager : MonoBehaviour
         selectedObject.transform.SetParent(parcours.transform);
 
         duplicate.transform.localPosition = new Vector3(0,(float)0.5,0);
+        duplicate.transform.localRotation = Quaternion.Euler(Vector3.zero);
 
         unselectAndHide();
         nbObjectFixed++;
@@ -199,6 +202,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        timer = Time.time;
         isStart = true;
         Transform[] children = parentGameObjectWithPhysic.GetComponentsInChildren<Transform>();
 
@@ -216,10 +220,14 @@ public class GameManager : MonoBehaviour
     }
 
     public void EndGame(){
-        //TODO end timer display ending screen
+        float endTime = Time.time;
+        float durationComplete = endTime - timer;
+        float durationFromStart = endTime - startTime;
+
         isStart = false;
 
-        timerText.text = Timer.ToString();
+        timerText.text = TimeSpan.FromSeconds(durationComplete).ToString(@"mm\mss\s");
+        timerTextFromStart.text = TimeSpan.FromSeconds(durationFromStart).ToString(@"mm\mss\s");
         objectNbText.text = nbObjectFixed.ToString();
 
         menuUIStartReset.SetActive(false);
