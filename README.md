@@ -54,7 +54,7 @@ Aides :
 
 ## Problèmes rencontrés
 
-- L'impossibilité d'avoir plus de 4 images targets
+- L'impossibilité d'avoir plus de 4 images targets, nous n'avons pas compris comment rajouter une base de données d'images utilisable dans le projet
 - La faible rigidité des images targets (imprimées sur papier) à tendance à faire penché les objets qui y sont ratachés (notamment le parcours)
 
 ## Améliorations possibles
