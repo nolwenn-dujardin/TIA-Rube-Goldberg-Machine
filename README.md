@@ -42,6 +42,16 @@ Aides :
     - Le nombre d'objets utilisés
     ![ImagesReadMe/EndMenu.png](ImagesReadMe/EndMenu.png)
 
+## Parcours
+
+![ImagesReadMe/parcours_face1.png](ImagesReadMe/parcours_face1.png)
+
+![ImagesReadMe/parcours_face2.png](ImagesReadMe/parcours_face2.png)
+
+![ImagesReadMe/parcours_face3.png](ImagesReadMe/parcours_face3.png)
+
+![ImagesReadMe/parcours_face4.png](ImagesReadMe/parcours_face4.png)
+
 ## Problèmes rencontrés
 
 - L'impossibilité d'avoir plus de 4 images targets
